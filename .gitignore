@@ -1,0 +1,77 @@
+# ==========================
+# Node.js
+# ==========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ==========================
+# Playwright
+# ==========================
+playwright-report/
+test-results/
+blob-report/
+
+# Screenshots, videos, traces (generated during execution)
+test-results/**/*.png
+test-results/**/*.jpg
+test-results/**/*.jpeg
+test-results/**/*.webm
+test-results/**/*.zip
+test-results/**/*.trace
+
+# ==========================
+# Allure Reports
+# ==========================
+allure-results/
+allure-report/
+
+# ==========================
+# Environment Files
+# ==========================
+.env
+.env.*
+!.env.example
+
+# ==========================
+# Logs
+# ==========================
+logs/
+*.log
+
+# ==========================
+# IDE Files
+# ==========================
+.vscode/
+.idea/
+*.iml
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.temp
+
+# ==========================
+# Cache
+# ==========================
+.cache/
+.nyc_output/
+
+# ==========================
+# MCP (Optional)
+# ==========================
+.playwright-mcp/
+
+# ==========================
+# Coverage Reports
+# ==========================
+coverage/

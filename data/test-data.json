@@ -1,0 +1,16 @@
+{
+  "loginScenarios": [
+    {
+      "name": "valid credentials",
+      "username": "demo",
+      "password": "demo123",
+      "expectedMessage": "Welcome"
+    },
+    {
+      "name": "invalid credentials",
+      "username": "wrongUser",
+      "password": "wrongPass",
+      "expectedMessage": "Invalid credentials"
+    }
+  ]
+}
