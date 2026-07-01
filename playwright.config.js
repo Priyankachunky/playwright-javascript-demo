@@ -9,8 +9,9 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['html', { open: 'never' }],
+    ['junit', { outputFile: 'test-results/results.xml' }],
     ['allure-playwright', { outputFolder: 'allure-results', open: false }]
-  ],
+],
   use: {
     baseURL: process.env.BASE_URL || 'https://katalon-demo-cura.herokuapp.com',
     headless: true,
@@ -23,13 +24,13 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] }
     },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] }
-    },
-    {
-      name: 'edge',
-      use: { ...devices['Desktop Edge'], channel: 'msedge' }
-    }
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] }
+    // },
+    // {
+    //   name: 'edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' }
+    // }
   ]
 });

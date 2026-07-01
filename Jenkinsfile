@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     tools {
-        maven 'Maven3'
+        nodejs 'NodeJS'
     }
  
     stages {
@@ -23,14 +23,14 @@ pipeline {
  
     post {
         always {
-            junit 'target/surefire-reports/TEST-*.xml'
- 
-            archiveArtifacts artifacts: 'target/surefire-reports/**', allowEmptyArchive: true
- 
+            junit 'test-results/results.xml'
+
+            archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+            
             publishHTML(target: [
-                reportDir: 'target/surefire-reports',
+                reportDir: 'playwright-report',
                 reportFiles: 'index.html',
-                reportName: 'TestNG HTML Report',
+                reportName: 'Playwright HTML Report',
                 keepAll: true,
                 alwaysLinkToLastBuild: true,
                 allowMissing: true
