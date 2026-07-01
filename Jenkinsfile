@@ -14,7 +14,9 @@ pipeline {
  
         stage('Build & Test') {
             steps {
-                bat 'mvn clean test'
+                bat 'npm install'
+                bat 'npx playwright install'
+                bat 'npx playwright test'
             }
         }
     }
